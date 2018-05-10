@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+@font-face {
+	font-family: "Helvetica Ext";
+	src: url("HelveticaNeueLTStd-BdEx.otf");
+}
+
+
+body {
+	background: black;
+	color: white;
+	font-family: "Helvetica Ext";
+	letter-spacing: 1px;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+	margin: auto;
+	align-self: center;
+	position: relative;
+	top: -1rem;
+}
+
+h1:focus {
+	outline: none;
+	background: #111;
+	padding: 0.3rem;
+}
+
+.container {
+	width: 95%;
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+</style>
+<body>
+
+	<div class="container">
+		<h1 contenteditable="true">insert your instagram story text</h1>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function(){
+			$('.container').css('height', $(window).height());
+    		// Comma, not colon ----^
+		});
+		$(window).resize(function(){
+			$('.container').css('height', $(window).height());
+    		// Comma, not colon ----^
+		});
+</script>
+</body>
+</html>
